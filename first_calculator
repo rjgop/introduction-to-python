@@ -1,0 +1,32 @@
+def calculator(): 
+    print("Robs Calc Test #1")
+    print("I probably broke something :p")
+    print("-----------")
+
+    while True:
+        try:
+            a = float(input("First number: "))
+            op = input("Enter function (+, -, *, /): ").strip()
+            b = float(input("Second number: "))
+        except ValueError:
+            print("Numbers only.\n")
+            continue
+
+        if op == '+':
+            print(f"Result: {a + b}\n")
+        elif op == '-':
+            print(f"Result: {a - b}\n")
+        elif op == '*':
+            print(f"Result: {a * b}\n")
+        elif op == '/':
+            if b == 0:
+                print("Error: Division by zero.\n")
+            else:
+                print(f"Result: {a / b}\n")
+        else:
+            print(f"Invalid operator.\n")
+
+        if input("Start again? (yes or no): ").lower() != 'yes':
+            break
+
+calculator()
