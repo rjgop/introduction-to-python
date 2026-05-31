@@ -1,0 +1,12 @@
+test_score = int(input("Please enter your score: "))
+
+if test_score >= 90:
+    print(f"Grade A")
+elif test_score >= 80:
+    print(f"Grade B")
+elif test_score >= 70:
+    print(f"Grade C")
+elif test_score >= 60:
+    print(f"Grade D")
+else:
+    print(f"Grade F")
